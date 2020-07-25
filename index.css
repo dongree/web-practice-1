@@ -1,0 +1,93 @@
+body{
+  margin: 0;
+  font-family: 'Source Sans Pro';
+}
+
+a{
+  text-decoration: none;
+  color: #dfe6e9;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0984e3;
+  padding: 8px 12px;
+}
+
+.navbar_logo{
+  font-size: 24px;
+  color: #dfe6e9;
+}
+
+.navbar_logo i{
+  color: #00b894;
+}
+
+.navbar_menu{
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.navbar_menu li {
+  padding: 8px 12px;
+}
+
+.navbar_menu li:hover{
+  background-color: #00b894;
+  border-radius: 4px;
+}
+
+.navbar_icons{
+  list-style: none;
+  color:#dfe6e9;
+  display: flex;
+  padding-left: 0;
+}
+
+.navbar_icons li{
+  padding: 8px 12px;
+}
+
+.navbar_togleBtn{
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: #00b894;
+}
+
+@media screen and (max-width: 650px){
+  .navbar{
+    flex-direction: column;
+    align-items: start;
+    padding: 8px 24px;
+  }
+
+  .navbar_menu{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar_menu li{
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar_icons{
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar_togleBtn{
+    display: block;
+  }
+
+  .navbar_menu.active,
+  .navbar_icons.active{
+    display: flex;
+  }
+}
